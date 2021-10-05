@@ -7,5 +7,4 @@ public class CrudVector {
         crudVectorFrame cframe = new crudVectorFrame();
         cframe.show();
     }
-    
 }

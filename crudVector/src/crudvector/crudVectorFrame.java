@@ -112,7 +112,6 @@ public class crudVectorFrame extends JFrame {
                 public void actionPerformed(ActionEvent e){
                     String columnas[]={"Nombres","Paterno","Materno","Codigo"};
                     Object filas[][]=new Object[metodos.lista.size()][4];
-                
                     Vector nuevoVector = metodos.lista;
                     for(int i=0;i<nuevoVector.size();i++){
                         datosPersona v=(datosPersona)metodos.lista.get(i);

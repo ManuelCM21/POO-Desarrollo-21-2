@@ -6,8 +6,6 @@ import java.util.*;
 public class metodoSistema {
     
     public Vector lista = new Vector();
-    
-    public ArrayList<datosPersona> list = new ArrayList<>();
 
     public void registrarPersona(Object x) {
         lista.add(x);

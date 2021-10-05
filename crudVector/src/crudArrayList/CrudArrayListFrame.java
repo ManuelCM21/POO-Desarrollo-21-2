@@ -11,6 +11,8 @@ import javax.swing.*;
 
 public class CrudArrayListFrame extends JFrame {
     
+    ArrayList<datosPersona> list = new ArrayList<>();
+    
     MetodosSistema metodos = new MetodosSistema();
 
     JLabel lb_nombre = new JLabel("Nombre");
@@ -37,7 +39,7 @@ public class CrudArrayListFrame extends JFrame {
         JMenuItem menuReportes_General = new JMenuItem();
         JMenuItem menuReportes_Detallado = new JMenuItem();
         
-        menuFile.setText("File");
+        menuFile.setText("Archivo");
         menuFile_Exit.setText("Salir");
         menuMantenimiento.setText("Mantenimiento");
         menuMantenimiento_Ingresar.setText("Ingresar");
@@ -142,21 +144,16 @@ public class CrudArrayListFrame extends JFrame {
                     pan1.add(lb_nombre);
                     pan1.add(txt_nombre);
                     
-                    JPanel pan2 = new JPanel(new GridLayout(1,2));
-                    pan2.add(lb_codigo);
-                    pan2.add(txt_codigo);
-                    
-                    Object msg [] = {pan1, pan2};
+                    Object msg [] = {pan1};
                     
                     if(JOptionPane.showOptionDialog(null, msg, "Eliminar persona", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE,null,null,null)==JOptionPane.OK_OPTION){
                        datosPersona dp = new datosPersona();
                        dp.nombres = txt_nombre.getText();
-                       dp.codigo = txt_codigo.getText();
-                        if (txt_nombre.getText().equals("") && txt_codigo.getText().equals("")) {
+                        if (txt_nombre.getText().equals("")) {
                             JOptionPane.showMessageDialog(null, "Complete los datos", "Eliminar", JOptionPane.INFORMATION_MESSAGE);
                         }else{
-                            
-                            JOptionPane.showMessageDialog(null, "Se elimino correctamente", "Eliminar", JOptionPane.INFORMATION_MESSAGE);
+                            metodos.eliminarPersona(txt_nombre.getText());
+                            JOptionPane.showMessageDialog(null, "Se elimino correctamente a ", "Eliminar", JOptionPane.INFORMATION_MESSAGE);
                         }
                     }
                 }

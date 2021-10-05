@@ -10,6 +10,6 @@ public class MetodosSistema {
 
     public void registrarPersona(datosPersona x) {
         list.add(x);
-    }
+    } 
     
 }

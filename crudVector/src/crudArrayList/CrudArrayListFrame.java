@@ -57,7 +57,7 @@ public class CrudArrayListFrame extends JFrame {
         menuBar.add(menuReportes);
         
         setJMenuBar(menuBar);
-            setTitle("PRACTICANDO CRUD CON ARRAYLIST");
+        setTitle("PRACTICANDO CRUD CON ARRAYLIST");
         setSize(new Dimension(700,500));
         this.setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

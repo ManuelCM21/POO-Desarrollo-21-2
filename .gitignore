@@ -5,3 +5,7 @@
 **/target/*
 #**/*
 !**/*.java
+/poo-persona-p01/nbproject/private/
+/JavaApplication26/nbproject/private/
+/crudVector/nbproject/private/
+/crudVector/build/

@@ -12,10 +12,10 @@ public class MetodosSistema {
         list.add(x);
     } 
     
-    public void eliminarPersona(String nombre){
+    public void eliminarPersona(String nombre, String codigo){
         for (int i = 0; i < list.size(); i++) {
             datosPersona dp = list.get(i);
-            if (nombre.equals(dp.nombres)) {
+            if (nombre.equals(dp.nombres) && codigo.equals(dp.codigo)) {
                 list.remove(i);
             }
         }

@@ -147,19 +147,17 @@ public class crudVectorFrame extends JFrame {
 
                 Object msg[] = {pan1, pan2};
 
-                do {
-                    if (JOptionPane.showOptionDialog(null, msg, "Eliminar persona", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null) == JOptionPane.OK_OPTION) {
-                        datosPersona dp = new datosPersona();
-                        dp.nombres = txt_nombre.getText();
-                        dp.codigo = txt_codigo.getText();
-                        if (txt_codigo.getText().equals("") || txt_nombre.getText().equals("")) {
-                            JOptionPane.showMessageDialog(null, "Complete los datos", "Eliminar", JOptionPane.INFORMATION_MESSAGE);
-                        } else {
-                            metodos.eliminarPersona(txt_nombre.getText());
-                            JOptionPane.showMessageDialog(null, "Se elimino correctamente", "Eliminar", JOptionPane.INFORMATION_MESSAGE);
-                        }
+                if (JOptionPane.showOptionDialog(null, msg, "Eliminar persona", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, null, null) == JOptionPane.OK_OPTION) {
+                    datosPersona dp = new datosPersona();
+                    dp.nombres = txt_nombre.getText();
+                    dp.codigo = txt_codigo.getText();
+                    if (txt_nombre.getText().equals("") || txt_codigo.getText().equals("")) {
+                        JOptionPane.showMessageDialog(null, "Complete los datos", "Eliminar", JOptionPane.INFORMATION_MESSAGE);
+                    } else {
+                        metodos.eliminarPersona(txt_nombre.getText(), txt_codigo.getText());
+                        JOptionPane.showMessageDialog(null, "Se elimino correctamente", "Eliminar", JOptionPane.INFORMATION_MESSAGE);
                     }
-                } while (txt_nombre.getText().equals("") || txt_codigo.getText().equals(""));
+                }
                 txt_nombre.setText("");
                 txt_codigo.setText("");
             }

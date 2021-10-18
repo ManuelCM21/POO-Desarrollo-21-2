@@ -4,7 +4,7 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Vector; //or .Vector
+import java.util.*; //or .Vector
 import javax.swing.*;
 
 public class crudVectorFrame extends JFrame {
@@ -164,5 +164,4 @@ public class crudVectorFrame extends JFrame {
         }
         );
     }
-
 }
